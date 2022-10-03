@@ -1,15 +1,20 @@
 import React from 'react';
 import ProductItem from '../components/productItem';
-import '../styles/productList.scss';
+import useGetProducts from '@hooks/useGetProducts';
+import '@styles/productList.scss';
 
-const ProductList = () => {
+function ProductList() {
+  const API = 'https://api.escuelajs.co/api/v1/products';
+  const products = useGetProducts(API);
   return (
     <section className="main-container">
       <div className="ProductList">
-        <ProductItem />
+        {React.Children.toArray(
+          products.map((item) => <ProductItem product={item} />)
+        )}
       </div>
     </section>
   );
-};
+}
 
 export default ProductList;

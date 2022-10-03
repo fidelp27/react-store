@@ -1,15 +1,20 @@
 @import 'vars';
 
 nav {
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	padding: 0 24px;
+	padding: 0;
 	border-bottom: 1px solid var(--very-light-pink);
+	background-color: var(--white);
+	position: fixed;
+	top: 0;
+
 }
 .menu {
 	display: none;
 }
-.logo {
+.nav-logo {
 	width: 100px;
 }
 .navbar-left ul,
@@ -21,9 +26,13 @@ nav {
 	align-items: center;
 	height: 60px;
 }
+.navbar-right{
+	margin-right: 20px;
+}
 .navbar-left {
 	display: flex;
 }
+
 .navbar-left ul {
 	margin-left: 12px;
 }
@@ -43,7 +52,7 @@ nav {
 .navbar-email {
 	color: var(--very-light-pink);
 	font-size: var(--sm);
-	margin-right: 12px;
+	margin-right: 20px;
 }
 .navbar-shopping-cart {
 	position: relative;
